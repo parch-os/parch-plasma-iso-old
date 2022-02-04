@@ -17,8 +17,8 @@ file_permissions=(
   ["/etc/shadow"]="0:0:400"
   ["/root"]="0:0:750"
   ["/root/.automated_script.sh"]="0:0:755"
-  ["/home/liveuser"]="0:0:750"
   ["/usr/local/bin/choose-mirror"]="0:0:755"
   ["/etc/shadow"]="0:0:0400"
   ["/etc/gshadow"]="0:0:0400"
+  ["/var/lib/iwd"]="0:0:0700"
 )

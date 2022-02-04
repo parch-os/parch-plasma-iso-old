@@ -1,3 +1,4 @@
+alg-pure-cala-config
 alsa-utils
 amd-ucode
 arch-install-scripts
@@ -9,6 +10,8 @@ bind-tools
 brltty
 broadcom-wl
 btrfs-progs
+cabextract
+calamares
 clementine
 clonezilla
 cloud-init
@@ -48,6 +51,7 @@ intel-ucode
 ipw2100-fw
 ipw2200-fw
 ipython
+iranian-fonts
 irssi
 iw
 iwd
@@ -55,6 +59,7 @@ jfsutils
 kate
 kitty-terminfo
 konsole
+kpmcore
 less
 lftp
 libfido2
@@ -73,6 +78,7 @@ mc
 mdadm
 memtest86+
 mesa
+mesa-utils
 mkinitcpio
 mkinitcpio-archiso
 mkinitcpio-nfs-utils
@@ -92,6 +98,7 @@ okular
 openconnect
 openssh
 openvpn
+p7zip
 partclone
 parted
 partimage
@@ -100,6 +107,9 @@ plasma
 ppp
 pptpclient
 pv
+python-dbus
+python-evdev
+python-magic
 python-pip
 qemu-guest-agent
 refind
@@ -140,13 +150,6 @@ xf86-video-nouveau
 xfsprogs
 xl2tpd
 xorg
+yay-git
 youtube-dl
 zsh
-python-evdev
-python-dbus
-cabextract
-p7zip
-mesa-utils
-python-magic
-iranian-fonts
-yay-git
