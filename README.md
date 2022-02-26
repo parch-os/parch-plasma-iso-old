@@ -1,4 +1,4 @@
-# Parch os plasma Edition
+# ParchOS KDE Plasma Edition
 
 ![.github/workflows/iso-build.yaml](https://github.com/parch-os/parch-plasma-iso/actions/workflows/.github/workflows/iso-build.yaml/badge.svg)
 ![.github/workflows/iso-build.yaml](https://github.com/parch-os/parch-plasma-iso/actions/workflows/.github/workflows/bandit.yaml/badge.svg)
