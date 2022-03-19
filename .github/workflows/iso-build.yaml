@@ -4,8 +4,6 @@ on:
     push:
       tags:
        - "*"
-  schedule:
-    - cron:  "0 0 * * *"
 
 jobs:
   build:
@@ -24,4 +22,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: Parch Live ISO
-          path: out/*.iso
+          path: /__w/parch-plasma-iso/parch-plasma-iso/iso/out/*.iso
