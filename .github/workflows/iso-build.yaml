@@ -1,9 +1,20 @@
-name: Build Parch ISO
+# This workflow will build an Arch Linux ISO file with the commit on it
+
+name: Build Arch ISO with ArchInstall Commit
 on:
+  push:
+    branches:
+      - master
+      - main # In case we adopt this convention in the future
+  pull_request:
+    paths-ignore:
+      - "**.editorconfig"
+      - "**.gitignore"
+      - "**.md"
+      - "LICENSE"
   release:
-    push:
-      tags:
-       - "*"
+    types:
+      - created
 
 jobs:
   build:
@@ -17,9 +28,10 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
       - uses: actions/checkout@v2
-      - run: pacman -Sy; pacman --noconfirm -S archiso
+      - run: pacman -Sy; pacman --noconfirm -S git archiso
       - run: cd iso; mkarchiso -v -w work/ -o out/ ./ -g ${{ secrets.GPGID }}
-      - uses: actions/upload-artifact@v2
+      uses: softprops/action-gh-release@v1
         with:
-          name: Parch Live ISO
-          path: /__w/parch-plasma-iso/parch-plasma-iso/iso/out/*.iso
+          files: out/*.iso
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
