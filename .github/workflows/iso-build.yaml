@@ -22,6 +22,7 @@ jobs:
       - run: cd iso; mkarchiso -v -w work/ -o out/ ./ -g ${{ secrets.GPGID }}
       - uses: softprops/action-gh-release@v1
         with:
-          files: out/*.iso
+          files: |
+                /__w/parch-plasma-iso/parch-plasma-iso/iso/out/*.iso
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
