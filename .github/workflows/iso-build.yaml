@@ -2,16 +2,6 @@
 
 name: Build Arch ISO with ArchInstall Commit
 on:
-  push:
-    branches:
-      - master
-      - main # In case we adopt this convention in the future
-  pull_request:
-    paths-ignore:
-      - "**.editorconfig"
-      - "**.gitignore"
-      - "**.md"
-      - "LICENSE"
   release:
     types:
       - created
