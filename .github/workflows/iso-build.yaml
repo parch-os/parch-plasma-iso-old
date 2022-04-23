@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: pacman -Sy; pacman --noconfirm -S git archiso
       - run: cd iso; mkarchiso -v -w work/ -o out/ ./ -g ${{ secrets.GPGID }}
-      uses: softprops/action-gh-release@v1
+      - uses: softprops/action-gh-release@v1
         with:
           files: out/*.iso
         env:
